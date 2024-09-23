@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------- google font link start---- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- ---google font link end---- -->
+    <!-- font awosome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Blog of DOM</title>
+    <link rel="stylesheet" href="./output/outputblog.css">
+</head>
+<body class="font-Inter">
+    <nav class="w-full "></nav>
+    <header class="w-full sm:h-24 bg-[#f9f7f3]">
+        <section class="w-11/12 mx-auto flex justify-between pt-5">
+            <div class="flex flex-col justify-center">
+                <button id="btnHome" class="btn w-36 font-bold bg-[#b4f461] hidden sm:block">Home</button>
+            </div>
+            <div class="text-center sm:flex sm:justify-center sm:items-center">
+                <img class="hidden sm:block" src="./assets/logo.png" alt="">
+                <h2 class="font-bold ml-4">Donate Bangladesh</h2>
+            </div>
+            <div class="flex justify-center items-center w-52">
+                <img src="./assets/coin.png" alt="">
+                <h2 class="font-bold ml-3">10000 BDT</h2>
+            </div>
+        </section>
+    </header>
+    </nav>
+    <main class="w-full mt-6">
+        <section class="w-11/12 mx-auto">
+            <div class="flex space-x-4">
+                <h2 class="font-extrabold text-5xl ">Important FAQ</h2>
+                <i class="fa-solid fa-question fa-5x font-extrabold "></i>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>
+                        The Document Object Model (DOM) is a programming interface for web documents that defines the
+                        structure and content of an HTML or XML document as a tree of objects. It allows developers to
+                        interact with and manipulate the document's structure, content, and style dynamically through
+                        scripting languages like JavaScript. Each element, attribute, and piece of text in a web page
+                        becomes a node in the DOM tree, enabling the page's content to be modified, added, or deleted in
+                        real-time. The DOM is platform- and language-independent, providing a standard way for scripts
+                        to access and update web pages, making it a crucial part of building interactive and dynamic web
+                        applications.
+                    </p>
+                </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>
+                        To select an element from the DOM, JavaScript provides several methods that allow developers to
+                        target specific elements based on their unique identifiers, classes, tags, or other attributes.
+                        The most commonly used method is `document.getElementById()`, which selects an element by its
+                        unique `id` attribute. For selecting elements by their class name,
+                        `document.getElementsByClassName()` returns a live HTML collection of all elements with the
+                        specified class. Similarly, `document.getElementsByTagName()` retrieves elements by their tag
+                        name. A more versatile and widely used method is `document.querySelector()`, which allows
+                        selecting the first element that matches a given CSS selector, or
+                        `document.querySelectorAll()`, which returns all matching elements. These methods are
+                        essential for dynamically interacting with web pages.
+
+                    </p>
+                </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                    why is it useful?</div>
+                <div class="collapse-content">
+                    <p>
+                        Event delegation in the context of the DOM is a technique where a single event listener is
+                        attached to a parent element to manage events for its child elements, instead of adding
+                        individual listeners to each child. This is possible because of event bubbling, where an event
+                        triggered on a child element propagates up through its parent elements. Event delegation is
+                        useful because it improves performance by reducing the number of event listeners, especially
+                        when dealing with many dynamically added elements. It also simplifies code maintenance and
+                        ensures that newly created elements are automatically managed by the parent’s event listener
+                        without needing additional code.
+
+                    </p>
+                </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                    using the DOM?</div>
+                <div class="collapse-content">
+                    <p>
+                        To manipulate an element's attributes and styles using the DOM, JavaScript provides various
+                        methods and properties. Attributes like `id`, `src`, or `href` can be accessed or modified using
+                        `getAttribute()` and `setAttribute()`, or directly through the element's properties (e.g.,
+                        `element.id = "newId"`). For manipulating styles, the `style` property allows you to change
+                        individual CSS properties, like `element.style.color = "blue"`, or `element.style.display =
+                        "none"`. You can also add or remove CSS classes using `classList.add()`, `classList.remove()`,
+                        or toggle a class with `classList.toggle()`. These methods enable dynamic changes to an
+                        element's appearance or behavior, enhancing user interaction.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- --javascript link--- -->
+    <script src="./js/blog.js"></script>
+</body>
+</html>
