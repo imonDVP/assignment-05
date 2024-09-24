@@ -46,28 +46,31 @@ toNoakhaliDonateBtn.addEventListener('click', function () {
     const totalBalance = getTextFieldValueById('totalBalanceAmount');
     const totalNoakhaliDonationBalance = getTextFieldValueById('balanceNoakhaliAmount');
     const donationAmount = getInputFieldValueById('inputNoakhaliDonateAmount');
-    if (donationAmount > 0 && isNaN(donationAmount) === 'false' && totalBalance > donationAmount && (typeof donationAmount) === 'number' && input.includes(" ") === "false") {
-        const newNoakhaliDonationBalance = totalNoakhaliDonationBalance + donationAmount;
-        NoakhaliDonationBalance.innerText = newNoakhaliDonationBalance;
-        const remainingTotalBalance = totalBalance - donationAmount;
-        totalMainBalance.innerText = remainingTotalBalance;
-        //=== History Section style and represent by JS start
-        const historyItem = document.createElement("div");
-        historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4 ";
-        historyItem.innerHTML = `
-    <p class="text-xs text-yellow-500"> ${donationAmount } Taka is Donated for flood-2024 at Noakhali, Bangladesh</p>
-    <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
-    `;
-        console.log(historyItem);
-        console.log(historyItem.innerHTML);
-        const historyContainer = document.getElementById("historySection");
-        console.log(historyContainer);
-        console.log(historyItem);
-        historyContainer.insertBefore(historyItem, historyContainer.firstChild);;
-        //==== History Section style and represent by JS end
-    } else {
-        alert('Invalid Data');
-        return;
+    const donationAmountstring = donationAmount.toString();
+    const donationAmountArray = donationAmountstring.split(' ');
+    // const donationAmountArray = donationAmount.split('');
+    console.log(donationAmountArray);
+    for (const item of donationAmountArray) {
+        if (!isNaN(item) && item !== ' ' && item > 0) {
+            const newNoakhaliDonationBalance = totalNoakhaliDonationBalance + donationAmount;
+            NoakhaliDonationBalance.innerText = newNoakhaliDonationBalance;
+            const remainingTotalBalance = totalBalance - donationAmount;
+            totalMainBalance.innerText = remainingTotalBalance;
+            //=== History Section style and represent by JS start
+            const historyItem = document.createElement("div");
+            historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4 ";
+            historyItem.innerHTML = `
+        <p class="text-xs text-yellow-500"> ${donationAmount } Taka is Donated for flood-2024 at Noakhali, Bangladesh</p>
+        <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+        `;
+            const historyContainer = document.getElementById("historySection");
+            historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+            //==== History Section style and represent by JS end
+            document.getElementById("my_modal_1").showModal();
+        } else {
+            alert('Invalid Data');
+            return;
+        }
     }
 });
 /**
@@ -84,28 +87,29 @@ toFeniDonateBtn.addEventListener('click', function () {
     const totalBalance = getTextFieldValueById('totalBalanceAmount');
     const totalFeniDonationBalance = getTextFieldValueById('balanceFeniAmount');
     const donationAmount = getInputFieldValueById('inputFeniDonateAmount');
-    if (donationAmount > 0 && isNaN(donationAmount) === 'false' && totalBalance > donationAmount && (typeof donationAmount) === 'number' && input.includes(" ") === "false") {
-        const newFeniDonationBalance = totalFeniDonationBalance + donationAmount;
-        FeniDonationBalance.innerText = newFeniDonationBalance;
-        const remainingTotalBalance = totalBalance - donationAmount;
-        totalMainBalance.innerText = remainingTotalBalance;
-        //=== History Section style and represent by JS start
-        const historyItem = document.createElement("div");
-        historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
-        historyItem.innerHTML = `
+    const donationAmountstring = donationAmount.toString();
+    const donationAmountArray = donationAmountstring.split(' ');
+    for (const item of donationAmountArray) {
+        if (!isNaN(item) && item !== ' ' && item > 0) {
+            const newFeniDonationBalance = totalFeniDonationBalance + donationAmount;
+            FeniDonationBalance.innerText = newFeniDonationBalance;
+            const remainingTotalBalance = totalBalance - donationAmount;
+            totalMainBalance.innerText = remainingTotalBalance;
+            //=== History Section style and represent by JS start
+            const historyItem = document.createElement("div");
+            historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
+            historyItem.innerHTML = `
         <p class="text-xs text-yellow-500"> ${donationAmount } Taka is Donated for Flood Relief in Feni,Bangladesh</p>
         <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
         `;
-        console.log(historyItem);
-        console.log(historyItem.innerHTML);
-        const historyContainer = document.getElementById("historySection");
-        console.log(historyContainer);
-        console.log(historyItem);
-        historyContainer.insertBefore(historyItem, historyContainer.firstChild);;
-        //==== History Section style and represent by JS end
-    } else {
-        alert('Invalid Data');
-        return;
+            const historyContainer = document.getElementById("historySection");
+            historyContainer.insertBefore(historyItem, historyContainer.firstChild);;
+            //==== History Section style and represent by JS end
+            document.getElementById("my_modal_1").showModal();
+        } else {
+            alert('Invalid Data');
+            return;
+        }
     }
 });
 /**
@@ -121,28 +125,29 @@ toQuotaDonateBtn.addEventListener('click', function () {
     const totalBalance = getTextFieldValueById('totalBalanceAmount');
     const totalQuotaDonationBalance = getTextFieldValueById('balanceQuotaAmount');
     const donationAmount = getInputFieldValueById('inputQuotaDonateAmount');
-    if (donationAmount > 0 && isNaN(donationAmount) === 'false' && totalBalance > donationAmount && (typeof donationAmount) === 'number' && input.includes(" ") === "false") {
-        const newQuotaDonationBalance = totalQuotaDonationBalance + donationAmount;
-        QuotaDonationBalance.innerText = newQuotaDonationBalance;
-        const remainingTotalBalance = totalBalance - donationAmount;
-        totalMainBalance.innerText = remainingTotalBalance;
-        //=== History Section style and represent by JS start
-        const historyItem = document.createElement("div");
-        historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
-        historyItem.innerHTML = `
+    const donationAmountstring = donationAmount.toString();
+    const donationAmountArray = donationAmountstring.split(' ');
+    for (const item of donationAmountArray) {
+        if (!isNaN(item) && item !== ' ' && item > 0) {
+            const newQuotaDonationBalance = totalQuotaDonationBalance + donationAmount;
+            QuotaDonationBalance.innerText = newQuotaDonationBalance;
+            const remainingTotalBalance = totalBalance - donationAmount;
+            totalMainBalance.innerText = remainingTotalBalance;
+            //=== History Section style and represent by JS start
+            const historyItem = document.createElement("div");
+            historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
+            historyItem.innerHTML = `
         <p class="text-xs text-yellow-500"> ${donationAmount } Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
         <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
         `;
-        console.log(historyItem);
-        console.log(historyItem.innerHTML);
-        const historyContainer = document.getElementById("historySection");
-        console.log(historyContainer);
-        console.log(historyItem);
-        historyContainer.insertBefore(historyItem, historyContainer.firstChild);;
-        //==== History Section style and represent by JS end
-    } else {
-        alert('Invalid Data');
-        return;
+            const historyContainer = document.getElementById("historySection");
+            historyContainer.insertBefore(historyItem, historyContainer.firstChild);;
+            //==== History Section style and represent by JS end
+            document.getElementById("my_modal_1").showModal();
+        } else {
+            alert('Invalid Data');
+            return;
+        }
     }
 });
 /**
