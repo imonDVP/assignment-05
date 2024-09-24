@@ -46,7 +46,7 @@ toNoakhaliDonateBtn.addEventListener('click', function () {
     const totalBalance = getTextFieldValueById('totalBalanceAmount');
     const totalNoakhaliDonationBalance = getTextFieldValueById('balanceNoakhaliAmount');
     const donationAmount = getInputFieldValueById('inputNoakhaliDonateAmount');
-    if (donationAmount > 0 && !isNaN(donationAmount) && totalBalance > donationAmount) {
+    if (donationAmount > 0 && isNaN(donationAmount) === 'false' && totalBalance > donationAmount && (typeof donationAmount) === 'number' && input.includes(" ") === "false") {
         const newNoakhaliDonationBalance = totalNoakhaliDonationBalance + donationAmount;
         NoakhaliDonationBalance.innerText = newNoakhaliDonationBalance;
         const remainingTotalBalance = totalBalance - donationAmount;
@@ -84,7 +84,7 @@ toFeniDonateBtn.addEventListener('click', function () {
     const totalBalance = getTextFieldValueById('totalBalanceAmount');
     const totalFeniDonationBalance = getTextFieldValueById('balanceFeniAmount');
     const donationAmount = getInputFieldValueById('inputFeniDonateAmount');
-    if (donationAmount > 0 && !isNaN(donationAmount) && totalBalance > donationAmount) {
+    if (donationAmount > 0 && isNaN(donationAmount) === 'false' && totalBalance > donationAmount && (typeof donationAmount) === 'number' && input.includes(" ") === "false") {
         const newFeniDonationBalance = totalFeniDonationBalance + donationAmount;
         FeniDonationBalance.innerText = newFeniDonationBalance;
         const remainingTotalBalance = totalBalance - donationAmount;
@@ -121,7 +121,7 @@ toQuotaDonateBtn.addEventListener('click', function () {
     const totalBalance = getTextFieldValueById('totalBalanceAmount');
     const totalQuotaDonationBalance = getTextFieldValueById('balanceQuotaAmount');
     const donationAmount = getInputFieldValueById('inputQuotaDonateAmount');
-    if (donationAmount > 0 && !isNaN(donationAmount) && totalBalance > donationAmount) {
+    if (donationAmount > 0 && isNaN(donationAmount) === 'false' && totalBalance > donationAmount && (typeof donationAmount) === 'number' && input.includes(" ") === "false") {
         const newQuotaDonationBalance = totalQuotaDonationBalance + donationAmount;
         QuotaDonationBalance.innerText = newQuotaDonationBalance;
         const remainingTotalBalance = totalBalance - donationAmount;
