@@ -61,7 +61,7 @@ toNoakhaliDonateBtn.addEventListener('click', function () {
             historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4 ";
             historyItem.innerHTML = `
         <p class="text-xs text-yellow-500"> ${donationAmount } Tk. is Donate for Flood at Noakhali, Bangladesh</p>
-        <p class="text-xs text-gray-500">${new Date("2015-03-25T12:00:00-06:00")}</p>
+        <p class="text-xs text-gray-500">${new Date()}</p>
         `;
             const historyContainer = document.getElementById("historySection");
             historyContainer.insertBefore(historyItem, historyContainer.firstChild);
@@ -70,6 +70,7 @@ toNoakhaliDonateBtn.addEventListener('click', function () {
             document.getElementById("my_modal_1").showModal();
         } else {
             alert('Invalid Donation Amount');
+            document.getElementById('inputNoakhaliDonateAmount').value = '';
             return;
         }
     }
@@ -101,7 +102,7 @@ toFeniDonateBtn.addEventListener('click', function () {
             historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
             historyItem.innerHTML = `
         <p class="text-xs text-yellow-500"> ${donationAmount } Tk. is Donated for Flood Relief in Feni,Bangladesh</p>
-        <p class="text-xs text-gray-500">${new Date("2015-03-25T12:00:00-06:00")}</p>
+        <p class="text-xs text-gray-500">${new Date()}</p>
         `;
             const historyContainer = document.getElementById("historySection");
             historyContainer.insertBefore(historyItem, historyContainer.firstChild);;
@@ -110,6 +111,7 @@ toFeniDonateBtn.addEventListener('click', function () {
             document.getElementById("my_modal_1").showModal();
         } else {
             alert('Invalid Donation Amount');
+            document.getElementById('inputFeniDonateAmount').value = '';
             return;
         }
     }
@@ -140,7 +142,7 @@ toQuotaDonateBtn.addEventListener('click', function () {
             historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
             historyItem.innerHTML = `
         <p class="text-xs text-yellow-500"> ${donationAmount } Tk. is Donated Aid for Injured in the Quota Movement </p>
-        <p class="text-xs text-gray-500">${new Date("2015-03-25T12:00:00-06:00")}</p>
+        <p class="text-xs text-gray-500">${new Date()}</p>
         `;
             const historyContainer = document.getElementById("historySection");
             historyContainer.insertBefore(historyItem, historyContainer.firstChild);
@@ -149,6 +151,7 @@ toQuotaDonateBtn.addEventListener('click', function () {
             document.getElementById("my_modal_1").showModal();
         } else {
             alert('Invalid Donation Amount');
+            document.getElementById('inputQuotaDonateAmount').value = '';
             return;
         }
     }
