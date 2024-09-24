@@ -60,12 +60,13 @@ toNoakhaliDonateBtn.addEventListener('click', function () {
             const historyItem = document.createElement("div");
             historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4 ";
             historyItem.innerHTML = `
-        <p class="text-xs text-yellow-500"> ${donationAmount } Taka is Donated for flood-2024 at Noakhali, Bangladesh</p>
-        <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+        <p class="text-xs text-yellow-500"> ${donationAmount } Tk. is Donate for Flood at Noakhali, Bangladesh</p>
+        <p class="text-xs text-gray-500">${new Date("2015-03-25T12:00:00-06:00")}</p>
         `;
             const historyContainer = document.getElementById("historySection");
             historyContainer.insertBefore(historyItem, historyContainer.firstChild);
             //==== History Section style and represent by JS end
+            document.getElementById('inputNoakhaliDonateAmount').value = '';
             document.getElementById("my_modal_1").showModal();
         } else {
             alert('Invalid Donation Amount');
@@ -99,12 +100,13 @@ toFeniDonateBtn.addEventListener('click', function () {
             const historyItem = document.createElement("div");
             historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
             historyItem.innerHTML = `
-        <p class="text-xs text-yellow-500"> ${donationAmount } Taka is Donated for Flood Relief in Feni,Bangladesh</p>
-        <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+        <p class="text-xs text-yellow-500"> ${donationAmount } Tk. is Donated for Flood Relief in Feni,Bangladesh</p>
+        <p class="text-xs text-gray-500">${new Date("2015-03-25T12:00:00-06:00")}</p>
         `;
             const historyContainer = document.getElementById("historySection");
             historyContainer.insertBefore(historyItem, historyContainer.firstChild);;
             //==== History Section style and represent by JS end
+            document.getElementById('inputFeniDonateAmount').value = '';
             document.getElementById("my_modal_1").showModal();
         } else {
             alert('Invalid Donation Amount');
@@ -137,12 +139,13 @@ toQuotaDonateBtn.addEventListener('click', function () {
             const historyItem = document.createElement("div");
             historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
             historyItem.innerHTML = `
-        <p class="text-xs text-yellow-500"> ${donationAmount } Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
-        <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+        <p class="text-xs text-yellow-500"> ${donationAmount } Tk. is Donated Aid for Injured in the Quota Movement </p>
+        <p class="text-xs text-gray-500">${new Date("2015-03-25T12:00:00-06:00")}</p>
         `;
             const historyContainer = document.getElementById("historySection");
-            historyContainer.insertBefore(historyItem, historyContainer.firstChild);;
+            historyContainer.insertBefore(historyItem, historyContainer.firstChild);
             //==== History Section style and represent by JS end
+            document.getElementById('inputQuotaDonateAmount').value = '';
             document.getElementById("my_modal_1").showModal();
         } else {
             alert('Invalid Donation Amount');
