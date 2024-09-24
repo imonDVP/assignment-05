@@ -51,7 +51,7 @@ toNoakhaliDonateBtn.addEventListener('click', function () {
     // const donationAmountArray = donationAmount.split('');
     console.log(donationAmountArray);
     for (const item of donationAmountArray) {
-        if (!isNaN(item) && item !== ' ' && item > 0) {
+        if (!isNaN(item) && item !== ' ' && item > 0 && totalBalance > donationAmount) {
             const newNoakhaliDonationBalance = totalNoakhaliDonationBalance + donationAmount;
             NoakhaliDonationBalance.innerText = newNoakhaliDonationBalance;
             const remainingTotalBalance = totalBalance - donationAmount;
@@ -68,7 +68,7 @@ toNoakhaliDonateBtn.addEventListener('click', function () {
             //==== History Section style and represent by JS end
             document.getElementById("my_modal_1").showModal();
         } else {
-            alert('Invalid Data');
+            alert('Invalid Donation Amount');
             return;
         }
     }
@@ -90,7 +90,7 @@ toFeniDonateBtn.addEventListener('click', function () {
     const donationAmountstring = donationAmount.toString();
     const donationAmountArray = donationAmountstring.split(' ');
     for (const item of donationAmountArray) {
-        if (!isNaN(item) && item !== ' ' && item > 0) {
+        if (!isNaN(item) && item !== ' ' && item > 0 && totalBalance > donationAmount) {
             const newFeniDonationBalance = totalFeniDonationBalance + donationAmount;
             FeniDonationBalance.innerText = newFeniDonationBalance;
             const remainingTotalBalance = totalBalance - donationAmount;
@@ -107,7 +107,7 @@ toFeniDonateBtn.addEventListener('click', function () {
             //==== History Section style and represent by JS end
             document.getElementById("my_modal_1").showModal();
         } else {
-            alert('Invalid Data');
+            alert('Invalid Donation Amount');
             return;
         }
     }
@@ -128,7 +128,7 @@ toQuotaDonateBtn.addEventListener('click', function () {
     const donationAmountstring = donationAmount.toString();
     const donationAmountArray = donationAmountstring.split(' ');
     for (const item of donationAmountArray) {
-        if (!isNaN(item) && item !== ' ' && item > 0) {
+        if (!isNaN(item) && item !== ' ' && item > 0 && totalBalance > donationAmount) {
             const newQuotaDonationBalance = totalQuotaDonationBalance + donationAmount;
             QuotaDonationBalance.innerText = newQuotaDonationBalance;
             const remainingTotalBalance = totalBalance - donationAmount;
@@ -145,7 +145,7 @@ toQuotaDonateBtn.addEventListener('click', function () {
             //==== History Section style and represent by JS end
             document.getElementById("my_modal_1").showModal();
         } else {
-            alert('Invalid Data');
+            alert('Invalid Donation Amount');
             return;
         }
     }
