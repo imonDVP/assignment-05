@@ -1,4 +1,4 @@
 document.getElementById('btnHome')
     .addEventListener('click', function () {
-        window.location.href = '/index.html';
+        window.location.href = './index.html';
     });

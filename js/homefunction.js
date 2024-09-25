@@ -3,7 +3,7 @@
  */
 document.getElementById('btnBlog')
     .addEventListener('click', function () {
-        window.location.href = '/blog.html';
+        window.location.href = './blog.html';
     });
 /**
  *----------Common section start--------
