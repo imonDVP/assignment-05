@@ -141,7 +141,7 @@ toQuotaDonateBtn.addEventListener('click', function () {
             const historyItem = document.createElement("div");
             historyItem.className = "bg-white p-5 rounded-md border-l-2 border-indigo-500  border shadow-sm  rounded-lg mt-4";
             historyItem.innerHTML = `
-        <p class="text-xs text-yellow-500"> ${donationAmount } Tk. is Donated Aid for Injured in the Quota Movement </p>
+        <p class="text-xs text-yellow-500 "> ${donationAmount } Tk. is Donated Aid for Injured in the Quota Movement </p>
         <p class="text-xs text-gray-500">${new Date()}</p>
         `;
             const historyContainer = document.getElementById("historySection");
